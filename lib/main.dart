@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'registrationScreen.dart';
+import 'deliveryScreen/deliveryScreen.dart';
+// ignore: unused_import
+import 'registrationScreen/registrationScreen.dart';
 
 void main() {
-  runApp(RegistrationScreen());
+  runApp(DeliveryScreen());
 }

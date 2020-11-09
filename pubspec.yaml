@@ -1,18 +1,7 @@
-name: registerscreen
+name: flutteruichallenge
 description: A new Flutter project.
 
-
-
 publish_to: 'none' 
-
-
-
-
-
-
-
-
-
 
 
 version: 1.0.0+1
@@ -24,9 +13,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  
-  
   cupertino_icons: ^1.0.0
 
 dev_dependencies:

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:registerscreen/style.dart';
+import 'style.dart';
 
 class RegistrationScreen extends StatefulWidget {
   @override
