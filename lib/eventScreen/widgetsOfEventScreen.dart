@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const kDefaultTextStyle = TextStyle(fontSize: 25, color: Colors.white70);
+
 class EventButton extends StatelessWidget {
   EventButton({this.icon, this.text});
 

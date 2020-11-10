@@ -15,7 +15,7 @@ class _EventScreenState extends State<EventScreen> {
           Icons.headset_mic,
           color: Colors.white,
         ),
-        text: 'Nasheed',
+        text: 'Online Meeting',
       ),
       EventButton(
         icon: Icon(
@@ -104,7 +104,7 @@ class _EventScreenState extends State<EventScreen> {
               children: [
                 Text(
                   'All Events',
-                  style: TextStyle(fontSize: 25, color: Colors.white70),
+                  style: kDefaultTextStyle,
                 ),
                 Container(
                   height: 120,
@@ -118,7 +118,7 @@ class _EventScreenState extends State<EventScreen> {
                 ),
                 Text(
                   'Popular Events',
-                  style: TextStyle(fontSize: 25, color: Colors.white70),
+                  style: kDefaultTextStyle,
                 ),
                 Expanded(
                   child: ListView.builder(
