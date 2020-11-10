@@ -1,7 +1,89 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutteruichallenge/deliveryScreen/widgetsOfDeliveryScreen.dart';
 
-class DeliveryScreen extends StatelessWidget {
+class DeliveryScreen extends StatefulWidget {
+  @override
+  _DeliveryScreenState createState() => _DeliveryScreenState();
+}
+
+class _DeliveryScreenState extends State<DeliveryScreen> {
+  List<Widget> deliveryList = [
+    DeliveryCard(
+      locationWithFlag: '🇺🇸 New Jersey',
+      buttonColor: Color(0xFF7A7E81),
+      buttonTitle: 'Draft',
+      mainHeadTitle: 'New Package in USA',
+      hasDeliverySection: false,
+      // if true then it will show the data of delivery section
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇧🇩 Chittagong',
+      buttonColor: Color(0xFF0A81E4),
+      buttonTitle: 'Pending',
+      mainHeadTitle: 'Samsung Curved 32 inch',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '1541818418118889',
+      totalMoney: '5845',
+      weight: 'n/a',
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇧🇩 Dhaka',
+      buttonColor: Color(0xFF78B23D),
+      buttonTitle: 'Arrived',
+      mainHeadTitle: 'IPhone X Kidney Phone',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '504508419898081891',
+      totalMoney: '105',
+      weight: 'n/a',
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇨🇳 China',
+      buttonColor: Color(0xFFE53A38),
+      buttonTitle: 'Returned',
+      mainHeadTitle: 'Copy jinish diye diche',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '1189165058146585089',
+      totalMoney: '105',
+      weight: 'n/a',
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇧🇩 Dhaka',
+      buttonColor: Color(0xFF78B23D),
+      buttonTitle: 'Arrived',
+      mainHeadTitle: 'Iphone X onek purano hoye gece',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '504508419898081891',
+      totalMoney: '105',
+      weight: 'n/a',
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇧🇩 Dhaka',
+      buttonColor: Color(0xFF78B23D),
+      buttonTitle: 'Arrived',
+      mainHeadTitle: 'IPhone X Kidney Phone',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '504508419898081891',
+      totalMoney: '105',
+      weight: 'n/a',
+    ),
+    DeliveryCard(
+      locationWithFlag: '🇧🇩 Dhaka',
+      buttonColor: Color(0xFF78B23D),
+      buttonTitle: 'Arrived',
+      mainHeadTitle: 'IPhone X Kidney Phone',
+      hasDeliverySection: true,
+      // if true then it will show the data of delivery section
+      deliveryNumber: '504508419898081891',
+      totalMoney: '105',
+      weight: 'n/a',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,95 +114,14 @@ class DeliveryScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Card(
-                elevation: 5,
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text('🇺🇸 New Jersey'),
-                      trailing: Container(
-                        padding: EdgeInsets.fromLTRB(25, 5, 25, 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          color: Colors.black54,
-                        ),
-                        child: Text(
-                          'Draft',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                      visualDensity: VisualDensity(horizontal: 0, vertical: -2),
-                    ),
-                    ListTile(
-                      title: Text(
-                        'New Package In USA',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      visualDensity: VisualDensity(horizontal: 0, vertical: -2),
-                    ),
-                    ListTile(
-                      tileColor: Colors.grey[400],
-                      visualDensity: VisualDensity(horizontal: 0, vertical: -2),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                WidgetSpan(
-                                  child: Icon(
-                                    Icons.assignment,
-                                    size: 17,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: '1518518810189110',
-                                  style: TextStyle(
-                                      fontSize: 15, color: Colors.black54),
-                                ),
-                              ],
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                WidgetSpan(
-                                  child: Icon(
-                                    Icons.monetization_on,
-                                    size: 17,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: '500',
-                                  style: TextStyle(
-                                      fontSize: 15, color: Colors.black54),
-                                ),
-                              ],
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                WidgetSpan(
-                                  child: Icon(
-                                    Icons.shopping_basket,
-                                    size: 17,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: 'n/a',
-                                  style: TextStyle(
-                                      fontSize: 15, color: Colors.black54),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+              Expanded(
+                child: ListView.builder(
+                  itemCount: deliveryList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return deliveryList[index];
+                  },
                 ),
-              )
+              ),
             ],
           ),
         ),
