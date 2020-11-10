@@ -89,6 +89,34 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              FlatButton.icon(
+                onPressed: null,
+                icon: Icon(
+                  Icons.store,
+                  color: Colors.blue,
+                ),
+                label: Text(
+                  'Deliveries',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+              FlatButton.icon(
+                onPressed: null,
+                icon: Icon(Icons.redeem),
+                label: Text('Packages'),
+              ),
+              FlatButton.icon(
+                onPressed: null,
+                icon: Icon(Icons.settings),
+                label: Text('Settings'),
+              ),
+            ],
+          ),
+        ),
         backgroundColor: Color(0xFF2F91E8),
         appBar: AppBar(
           backgroundColor: Color(0xFF2F91E8),
