@@ -14,7 +14,7 @@ This flutter application is a part of Flutter UI Challenge BD
 
 <hr>
 
-# deliveryScreen
+# eventScreen
 
 This flutter application is a part of Flutter UI Challenge BD
 
